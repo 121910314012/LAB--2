@@ -1,0 +1,21 @@
+# TO FIND SMALLEST OF THREE NUMBERS
+a=int(input('Enter First Number'))
+b=int(input('Enter Second Number'))
+c=int(input('Enter Third Number'))
+
+if (a<=b) and (b<=c):
+    smallest=a
+elif (b<=c) and (b<=a):
+    smallest=b
+else:
+    smallest=c
+ # RESULT   
+print("Smallest of Three Numbers is",smallest)
+
+OUTPUT:
+Enter First Number 4
+
+Enter Second Number 5
+
+Enter Third Number 5
+Smallest of Three Numbers is 4
