@@ -1,0 +1,31 @@
+# LCM AND GCD OF TWO NUMBERS
+a= int(input('Enter First Number'))
+b=int(input('Enter Second Number'))
+ 
+def gcdofnumbers(a,b):
+     if(b==0): 
+        return a 
+     else: 
+        return gcdofnumbers(b,a%b)
+ 
+def lcmofnumbers(a,b):
+     if(a>b):
+         greater=a
+     else:
+         greater=b
+     while(True):
+         if((greater%a==0) and (greater%b==0) ):
+             lcm=greater
+             break
+         greater=greater+1
+     return lcm
+# RESULT
+print("LCM is",lcmofnumbers(a,b))
+print("GCD is",gcdofnumbers(a,b))
+
+OUTPUT:
+Enter First Number 5
+
+Enter Second Number 10
+LCM is 10
+GCD is 5
