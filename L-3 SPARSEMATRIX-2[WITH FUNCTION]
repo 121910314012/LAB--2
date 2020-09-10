@@ -1,0 +1,53 @@
+#SPARSE MATRIX
+# FUNCTION TO DISPLAY MATRIX
+def displayMatrix(matrix): 
+      
+    for row in matrix: 
+        for element in row: 
+            print(element, end =" ") 
+        print() 
+  
+# TO CONVERT MATRIX TO SPARSE MATRIX
+def convertToSparseMatrix(matrix): 
+  
+    sparseMatrix =[] 
+ # SEARCHING VALUES GRETARE THAN ZERO
+ 
+    for i in range(len(matrix)): 
+        for j in range(len(matrix[0])): 
+            if matrix[i][j] != 0 : 
+  
+#CREATING TEMPRARY  SUBLIST
+                temp = [] 
+                temp.append(i) 
+                temp.append(j) 
+                temp.append(matrix[i][j]) 
+#APPENDING VALUES FOR ROW AND COLUMN INTO SUBLIST
+                sparseMatrix.append(temp) 
+#DISPLAYING SPARSE MATRIX
+    print("\nSparse Matrix: ")  
+    displayMatrix(sparseMatrix)                  
+
+normalMatrix =[[11, 0, 0, 0],  
+               [0, 22, 0, 0],  
+               [0, 0, 33, 0],  
+               [0, 0, 0, 45],  
+               [56, 0, 0, 0]]  
+   
+displayMatrix(normalMatrix) 
+
+convertToSparseMatrix(normalMatrix)
+
+OUTPUT:
+11 0 0 0 
+0 22 0 0 
+0 0 33 0 
+0 0 0 45 
+56 0 0 0 
+
+Sparse Matrix: 
+0 0 11 
+1 1 22 
+2 2 33 
+3 3 45 
+4 0 56 
