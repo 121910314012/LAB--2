@@ -1,0 +1,45 @@
+#SPARSE MATRIX WITHOUT USER DEFINE FUNCTION
+NormalMatrix = [[12, 0, 0, 0],
+                [0,14, 0, 0],
+                [0, 24, 2, 0],
+                [0, 0, 48, 4],
+                [65, 0, 0, 0]]
+for row in NormalMatrix:
+    for element in row:
+        print(element, end=" ")
+    print()
+
+sparseMatrix=[]
+#SEARCHING VALUES GREATER THAN ZERO
+for i in range(len(NormalMatrix)):
+    for j in range(len(NormalMatrix[0])):
+        if NormalMatrix[i][j] != 0:
+
+            temp = []
+            temp.append(i)
+            temp.append(j)
+            temp.append(NormalMatrix[i][j])
+ #APPENDING VALUES FOR ROW AND CLOUMN INTO SUBLIST           
+            sparseMatrix.append(temp)
+#DISPLAYING SPARSE LIST
+print("\nSparse Matrix: ")
+for row in sparseMatrix:
+    for element in row:
+        print(element, end=" ")
+    print()
+    
+OUTPUT:
+12 0 0 0 
+0 14 0 0 
+0 24 2 0 
+0 0 48 4 
+65 0 0 0 
+
+Sparse Matrix: 
+0 0 12 
+1 1 14 
+2 1 24 
+2 2 2 
+3 2 48 
+3 3 4 
+4 0 65 
