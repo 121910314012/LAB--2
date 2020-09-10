@@ -1,0 +1,44 @@
+#SPARSE MATRIX USING THRESHOLD VALUE
+x= int(input("Enter Number of rows :"))
+y= int(input("Enter columns :"))
+matrix=[]
+for i in range (x):
+    z=[]
+    for j in range(y):
+        j=int(input("Enter Number in matrix"+str(i)+" "+str(j)+" "))
+        z.append(j)
+    print()
+    matrix.append(z)
+for i in range (x):
+    for j in range (y):
+        print (matrix [i][j],end="")
+        print()
+
+thres=1
+for i in range(len(matrix)):
+    for j in range(len(matrix[0])):
+        if matrix[i][j] <thres+1:
+            matrix[i][j]=0
+sparseMatrix = []
+for i in range(len(matrix)):
+    for j in range(len(matrix[0])):
+        if matrix[i][j] != 0:
+            temp = [i, j, matrix[i][j]]
+            sparseMatrix.append(temp)
+print(sparseMatrix)
+
+OUTPUT:
+Enter Number in matrix0 0 1
+
+Enter Number in matrix0 1 2
+
+
+Enter Number in matrix1 0 3
+
+Enter Number in matrix1 1 4
+
+1
+2
+3
+4
+[[0, 1, 2], [1, 0, 3], [1, 1, 4]]
