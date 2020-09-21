@@ -1,0 +1,8 @@
+# PROGRAM-1
+name = input("enter your name")
+print("Hello" + "," + name +  "!")
+
+
+OUTPUT:
+enter your name Harry
+Hello,Harry!
