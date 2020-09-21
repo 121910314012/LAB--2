@@ -1,0 +1,11 @@
+b = int(input())
+h = int(input())
+area=(b*h)/2
+print("Area =")
+print(area)
+  
+	
+	OUTPUT:
+	 3
+   4
+Area = 6.0
