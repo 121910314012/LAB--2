@@ -1,0 +1,35 @@
+#binary search
+def linearsearch(arr,elem):
+    for i in range(len(arr)):
+        if(arr[i] == elem):
+            return i+1
+        else:
+            continue
+    return -1
+    
+limit = int(input("Enter the limit : "))
+arry = []
+for i in range(0,limit):
+    ele = input("Enter alphabet : ")
+    arry.append(ele)
+    
+findele = input("Enter element to find : ")
+pos = str(linearsearch(arry,findele))
+if(linearsearch(arry,findele) > 0):
+    print("The element found at "+pos)
+else:
+    print("Element not found")
+    
+    OUTPUT:
+    Enter the limit : 4
+
+Enter alphabet : a
+
+Enter alphabet : b
+
+Enter alphabet : c
+
+Enter alphabet : d
+
+Enter element to find : e
+Element not found
