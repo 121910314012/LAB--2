@@ -1,0 +1,19 @@
+#LINEAR SEARCH
+List=[1,2,3,4]
+n=0
+print(List)
+numbers=int(input("enter the number to search:"))
+for i in range(len(List)):
+    if List[i]==numbers:
+        n=i
+    else:
+        continue 
+    print("number"+"found at position",(n+1))
+else:
+    print("not found")
+    
+    OUTPUT:
+    [1, 2, 3, 4]
+
+enter the number to search:5
+not found
