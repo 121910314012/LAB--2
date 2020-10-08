@@ -1,0 +1,41 @@
+# Delete the first node from the list
+import sys 
+class Node: 
+    def __init__(self, data): 
+        self.data = data 
+        self.next = None
+# to remove first node 
+def removeFirstNode(head): 
+    if not head: 
+        return None
+    temp = head 
+ 
+    head = head.next
+    temp = None
+    return head 
+
+def push(head, data): 
+    if not head: 
+        return Node(data) 
+    temp = Node(data) 
+    temp.next = head 
+    head = temp 
+    return head 
+# Driver code 
+if __name__=='__main__': 
+  
+    head = None  
+    head = push(head, 1) 
+    head = push(head, 2) 
+    head = push(head, 3) 
+    head = push(head, 4) 
+    head = push(head, 0) 
+    head = removeFirstNode(head)  
+    while(head): 
+        print("{} ".format(head.data), end ="") 
+        head = head.next
+        
+        
+        
+        OUTPUT:
+        4 3 2 1
