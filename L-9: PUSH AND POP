@@ -1,0 +1,28 @@
+# PUSH AND POP
+stack = []
+
+stack.append('x')
+stack.append('y')
+stack.append('z')
+ 
+print('Initial stack')
+print(stack)
+ 
+print('\nElements poped from stack:')
+print(stack.pop())
+print(stack.pop())
+print(stack.pop())
+print('\n stack after elements are poped:')
+print(stack)
+
+OUTPUT:
+Initial stack
+['x', 'y', 'z']
+
+Elements poped from stack:
+z
+y
+x
+
+ stack after elements are poped:
+[]
