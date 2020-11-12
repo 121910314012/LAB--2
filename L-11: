@@ -1,0 +1,22 @@
+#To find second smallest element in the array
+n=int(input("ENTER  "))
+k=list()
+for i in range(n):
+    k.append(int(input()))
+k=list(set(k))
+k.sort()
+print(" THE SECOND SMALLEST ELEMENT IS: ",k[1])
+
+OUTPUT:
+ENTER  5
+
+1
+
+2
+
+3
+
+4
+
+5
+ THE SECOND SMALLEST ELEMENT IS:  2
