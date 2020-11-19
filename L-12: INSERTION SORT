@@ -1,0 +1,26 @@
+#InsertionSort[Iterative]
+a = []
+# number of elemetns as input
+n = int(input("Enter number of elements : "))
+for i in range(0, n):
+    ele = int(input())
+    a.append(ele)  # adding the element
+print(a)
+#iterating over a
+for i in a:
+    j = a.index(i)
+    while j>0:
+
+        if a[j-1] > a[j]:
+
+            a[j-1],a[j] = a[j],a[j-1]
+        else:
+            break
+        j = j-1
+print("Element after sorting is")
+print (a)
+
+OUTPUT:
+[1, 5, 9, 7, 3]
+Element after sorting is
+[1, 3, 5, 7, 9]
